@@ -7,12 +7,11 @@
         </td>
       </tr>
       <tr>
-        <td class="button dark" @click="clear">C</td>
-        <td class="button dark" @click="invert">+/-</td>
-        <td class="button dark" @click="percent">%</td>
+        <td class="button dark" @click="clear">CE</td>
         <td class="button orange" @click="setOperator('/')">/</td>
       </tr>
       <tr>
+        
         <td class="button grey" @click="addNumber(7)">7</td>
         <td class="button grey" @click="addNumber(8)">8</td>
         <td class="button grey" @click="addNumber(9)">9</td>
@@ -55,9 +54,7 @@
         this.tmp_value = 0;
         this.operator = undefined;
       },
-      invert() {
-        this.result *= -1;
-      },
+      
       percent() {
         this.result /= 100;
       },
@@ -139,7 +136,6 @@
 
     .button {
       margin: 10px;
-      border-radius: 40px;
       width: 80px;
       height: 80px;
       text-align: center;
@@ -148,7 +144,7 @@
     }
 
     .button-col2 {
-      border-radius: 40px;
+
       width: 160px;
       height: 80px;
       text-align: center;
