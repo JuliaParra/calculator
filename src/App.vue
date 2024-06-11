@@ -1,22 +1,39 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import WelcomeItem from './components/WelcomeItem.vue';
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div id="app">
+    <WelcomeItem/>
+  </div>
 </template>
 
+<script>
+import Calculator from './components/WelcomeItem.vue'
+
+export default {
+  name: 'app',
+  components: {
+    WelcomeItem
+  }
+}
+</script>
+
+<style lang="scss">
+  body {
+    background-color: #222;
+    margin: 0;
+    padding: 0;
+  }
+
+  #app {
+    font-family: 'Avenir', Helvetica, Arial;
+    text-align: center;
+    color: #fff;
+  }
+</style>
 <style scoped>
 header {
   line-height: 1.5;
